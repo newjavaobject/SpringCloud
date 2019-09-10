@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: configServer
+  profiles:
+    active: native
+# 配置config中心
+  config:
+    server:
+      native:
+        search-locations: classpath:/config
+
+security:
+  basic:
+    enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: localhost

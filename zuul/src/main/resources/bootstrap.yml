@@ -1,0 +1,27 @@
+server:
+  port: 8083
+
+zuul:
+  routes:
+    users:
+      path: /zl/user/*
+      serviceId: users
+
+spring:
+  application:
+    name: zuul
+  cloud:
+    config:
+      profile: dev
+      uri: http://localhost:8081/
+      discovery:
+        enabled: true
+      name: users
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: localhost

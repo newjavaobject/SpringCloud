@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="zuul:war">
+    <output-path>$PROJECT_DIR$/zuul/target</output-path>
+    <root id="archive" name="zuul-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="zuul:war exploded" />
+    </root>
+  </artifact>
+</component>
